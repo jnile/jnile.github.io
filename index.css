@@ -1,0 +1,23 @@
+.navigation-wrapper ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.navigation-wrapper li {
+    float: left;
+}
+
+.navigation-wrapper li a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.navigation-wrapper a:hover {
+    background-color: #111111;
+}
