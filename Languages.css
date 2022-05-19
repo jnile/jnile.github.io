@@ -1,0 +1,17 @@
+.tag {
+    height: 25px;
+
+    padding: 6px !important;
+
+    border: 2px solid black;
+    border-radius: 15px !important;
+}
+
+.tag img {
+    width: 25px;
+    height: 25px;
+}
+
+.javascript {
+    background-color: #ffeb57 !important;
+}
