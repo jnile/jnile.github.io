@@ -119,11 +119,20 @@ html {
 
 /* Billboard */
 .billboard {
-    width: auto;
-    height: 100px;
-
     grid-column: 3;
     grid-row: 2;
+}
 
-    background-color: pink;
+.stats {
+    border: 2px solid black;
+    border-radius: 10px;
+
+    margin: 0 5px;
+    padding-left: 10px;
+    background-color: #fff5f5;
+}
+
+.stats h3 {
+    margin: 5px 0;
+    text-decoration: underline;
 }
