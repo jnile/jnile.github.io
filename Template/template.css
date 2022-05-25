@@ -39,7 +39,7 @@ html {
     border: 3px solid #ffefef;
     border-radius: 10px;
 
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .content {
@@ -55,6 +55,11 @@ html {
 .content h2 {
     margin: 5px 0;
     text-decoration: underline;
+}
+
+.dates p {
+    display: inline;
+    margin-inline: 5px;
 }
 
 .tag-wrapper ul {
