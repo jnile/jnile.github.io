@@ -1,7 +1,8 @@
 async function test() {
-    const requestURL = 'https://jnile.github.io/Template/Archives/Documents/1/info.json';
-  const request = new Request(requestURL);
-
-  const response = await fetch(request);
-  console.log();
+    fetch('https://jnile.github.io/Template/Archives/Documents/1/info.json')
+    .then(res => res.json())
+    .then(json => {
+      //json vaiable contains object with data
+      console.log(json)
+    })
 }
