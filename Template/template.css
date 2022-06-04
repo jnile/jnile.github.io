@@ -54,7 +54,6 @@ html {
 
 .content h2 {
     margin: 5px 0;
-    text-decoration: underline;
 }
 
 .dates p {
@@ -70,4 +69,29 @@ html {
 .tag-wrapper ul li {
     float: left;
     margin: 2px;
+}
+
+.li-tag-name {
+    display: inline-block;
+    margin: 3.5px 0;
+}
+
+#info-image-list {
+    list-style-type: none;
+    padding: 0;
+    width: 90vw;
+    height: 120px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#info-image-list li{
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+
+.info-image img{
+    height: 100px;
+    width: auto;
 }

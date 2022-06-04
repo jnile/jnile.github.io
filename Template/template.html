@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../Languages.css">
         <script src="template.js"></script>
     </head>
-    <body style="margin:0;padding:0;" onload="test();">
+    <body style="margin:0;padding:0;" onload="loadingData();">
         <div class="navigation-wrapper">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -17,31 +17,38 @@
         <div class="overall-wrapper">
             <div class="content-wrapper">
                 <div class="content">
-                    <h2>Title</h2>
+                    <h2 id="info-title">Title</h2>
                     <div class="dates">
                         <p>Date created: </p>
-                        <p id="date-created">sd</p>
-                        <p>Date started: </p>
-                        <p id="date-started">sd</p>
+                        <p id="info-date-created">sd</p>
+                        <p>Date updates: </p>
+                        <p id="info-date-updated">sd</p>
                     </div>
                     <table class="tag-wrapper">
                         <tr>
                             <td>Tags:</td>
                             <td>
-                                <ul class="tag">
-                                    <li class="javascript"><img src="../Images/js.png">JavaScript</li>
-                                    <li class="css"><img src="../Images/css.png">CSS</li>
+                                <ul class="tag" id="info-tags">
+                                    <!--
+                                        Format of a tag in template.js:
+                                        `<li class="${currTag}"><img src="../Images/${currTag}.png"><p class="li-tag-name">${currTag}<p></li>`
+                                    -->
                                 </ul>
                             </td>
                         </tr>
                     </table>
                     <div class="image-display">
-
+                        <ul id="info-image-list">
+                            <!--
+                                `<li class="info-image"><img src="./Archives/Documents/1/${nameOfFile}"></li>`
+                            -->
+                        </ul>
                     </div>
-                    <div class="short-desc">
+                    <p id="info-resource-link"><a href="">Some link</a></p>
+                    <div class="short-desc" id="info-short-desc">
                         <p>Short Description Short Description Short Description Short Description Short Description</p>
                     </div>
-                    <div class="long-desc">
+                    <div class="long-desc" id="info-long-desc">
                         <p>Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description Long Description </p>
                     </div>
                 </div>
