@@ -8,13 +8,13 @@ async function loadingData() {
   
   docNo = params.get("docNo");
 
-  fetch(url.origin + `/archivetest/Template/Archives/Documents/${docNo}/info.json`)
+  fetch(url.origin + `/archivetest/Archives/Documents/${docNo}/info.json`)
   .then(res => res.json())
   .then(json => {
     //json vaiable contains object with data
     console.log(json);
     displayInfo(json);
-  })
+  });
 }
 
 /* Function to display document information onto screen
@@ -50,7 +50,7 @@ function addImages(imageArr) {
   for(let i = 0; i < imageArr.length; i++) {
     let nameOfFile = imageArr[i];
 
-    listOfImages += `<li class="info-image"><img src="./Archives/Documents/1/${nameOfFile}"></li>`;
+    listOfImages += `<li class="info-image"><img src="../Archives/Documents/${docNo}/${nameOfFile}"></li>`;
   }
 
   document.getElementById("info-image-list").innerHTML = listOfImages;

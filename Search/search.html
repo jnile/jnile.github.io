@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="Languages.css">
+        <link rel="stylesheet" href="search.css">
+        <link rel="stylesheet" href="../Languages.css">
+        <script src="search.js"></script>
     </head>
-    <body style="margin:0;padding:0;">
+    <body style="margin:0;padding:0;" onload="loadData();">
         <div class="navigation-wrapper">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="../Home/">Home</a></li>
+                <li><a href="">Search</a></li>
                 <li><a href="">About</a></li>
             </ul>
         </div>
@@ -33,16 +34,16 @@
                 </div>
             </div>
             <div class="display">
-                <ul class="display-list">
-                    <li><a href="http://localhost/archivetest/Template/template.html?docNo=1"><div class="item">
+                <ul class="display-list" id="project-listing">
+                    <li><a href="../Template/template.html?docNo=1"><div class="item">
                         <h2>Title</h2>
                         <table class="tag-wrapper">
                             <tr>
                                 <td>Tags:</td>
                                 <td>
                                     <ul class="tag">
-                                        <li class="javascript"><img src="Images/js.png">JavaScript</li>
-                                        <li class="css"><img src="Images/css.png">CSS</li>
+                                        <li class="javascript"><img src="../Images/javascript.png">JavaScript</li>
+                                        <li class="css"><img src="../Images/css.png">CSS</li>
                                     </ul>
                                 </td>
                             </tr>

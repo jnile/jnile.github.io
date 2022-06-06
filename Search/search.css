@@ -89,7 +89,6 @@ html {
     
 }
 
-
 /* Options */
 .display-list li {
     background-color: #fff9f9;
@@ -97,6 +96,10 @@ html {
     margin: 8px;
     padding: 8px;
     border-radius: 10px;
+}
+
+.display-list a {
+    color: black;
 }
 
 .display-list h2 {

@@ -1,0 +1,28 @@
+{
+    "storage" : [
+        {
+            "docNo": 0,
+            "title": "Example-Title",
+            "date_started": "20/02/2012",
+            "date_updated": "20/02/2012",
+            "tags": [
+                "javascript",
+                "css",
+                "html"
+            ],
+            "short_desc": "Example-short desc"
+        },
+        {
+            "docNo": 1,
+            "title": "Example-Title",
+            "date_started": "20/02/2012",
+            "date_updated": "20/02/2012",
+            "tags": [
+                "javascript",
+                "css",
+                "html"
+            ],
+            "short_desc": "Example-short desc"
+        }
+    ]
+}
