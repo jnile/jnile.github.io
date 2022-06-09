@@ -68,6 +68,14 @@ html {
     margin: 3px 0;
 }
 
+.filter-tags-options {
+    list-style: none;
+    
+    margin-top: 3px;
+    padding: 0;
+}
+
+
 /* List Display */
 .display {
     display: inline-grid;

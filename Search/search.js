@@ -1,6 +1,6 @@
 let onDisplay = [] /* Stores the displayed info */
 let buffer; /* Will store sorted array of information to display*/
-let data = {}; /* Data loaded into website */
+let data; /* Data loaded into website */
 let currPageNo = 1; /* Page number of stuff loaded */
 let tagInfo = {allTags:[], tagsCount:[], totalTags: 0} /* Stores data about tags */
 
@@ -14,6 +14,8 @@ async function loadData() {
     generateStats();
 
     displayStats();
+
+    displayFilter();
 }
 
 /**
@@ -27,12 +29,9 @@ async function getData() {
     .then(res => res.json())
     .then(json => {
     //json vaiable contains object with data
-    //Filter data for abstraction
-    let maxDocs = json.storage.length;
-    data.storage = [];
-    for(let i = 0; i < maxDocs; i++) {
-        data.storage.push(json.storage[i]);
-    }
+    data = json;
+
+    buffer = data.storage;
     console.log("Data fetched");
     });
 }
@@ -42,11 +41,14 @@ async function getData() {
  */
 function setOnDisplay() {
     console.log("onDisplay array called.");
-    let maxDocs = data.storage.length;
+
+    onDisplay = [];
+    let filteredBuffer = filterBuffer();
+    let maxDocs = filteredBuffer.length;
     if(maxDocs < 11) {
         currPageNo = 1;
         for(let i = 0; i < maxDocs; i++) {
-            onDisplay.push(data.storage[i]);
+            onDisplay.push(filteredBuffer[i]);
         }
     }
     console.log("Display array set");
@@ -99,7 +101,6 @@ function generateStats() {
         }
     }
 
-    console.log(tagInfo);
     console.log("generateStats finished");
 }
 
@@ -115,6 +116,53 @@ function displayStats() {
 
     document.getElementById("stats-listing").innerHTML = temp;
 }
+
+/**
+ * Display filter settings
+ */
+function displayFilter() {
+    document.getElementById("filter-tags").innerHTML = createFilterTags();
+}
+
+/**
+ *  Buffer Array is filtered from the Filter Section
+ * 
+ * @returns Filtered array from the filter section
+ */
+function filterBuffer() {
+    let cbs = document.getElementsByClassName("filter-tag-cb");
+    let tagsToFilterOut = [];
+    let filteredArray = [];
+
+    /* Get filter tags */
+    for(let x = 0; x < cbs.length; x++) {
+        if(cbs[x].checked) {
+            tagsToFilterOut.push(cbs[x].value);
+        }
+    }
+
+    /* Filter out the options */
+    for(let x = 0; x < buffer.length; x++) {
+        let tagsInList = buffer[x].tags;
+        if (tagsToFilterOut.some(item => tagsInList.includes(item)) == false) {
+            filteredArray.push(buffer[x]);
+        }
+    }
+
+    return filteredArray;
+}
+
+/**
+ * Update Display with new values
+ */
+function updateDisplay () {
+    setOnDisplay();
+    displayOptions();
+}
+
+
+
+
 
 
 
@@ -170,4 +218,30 @@ function createStatsListing(lang,val) {
         <div class="progress-fill" style="width:${(val/tagInfo.totalTags * 100)}%"></div>
     </div>`;
     return template;
+}
+
+/**
+ * Create li elements for tags filter
+ */
+function createFilterTags() {
+    let temp = "";
+
+    for(let x = 0; x < tagInfo.allTags.length; x++) {
+        temp += createFilterTagListing(tagInfo.allTags[x]);
+    }
+
+    return temp;
+}
+
+/**
+ * Create a li element for a specific tag
+ * 
+ * @param tag name of the tag
+ */
+function createFilterTagListing(tag) {
+    let temp = `<li>
+                    <input type="checkbox" value="${tag}" class="filter-tag-cb">
+                    <label>${capitaliseFirstLetter(tag)}</label>
+                </li>`;
+    return temp;
 }
