@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="search.css">
         <link rel="stylesheet" href="../Languages.css">
+        <script src="../Utility/utility.js"></script>
         <script src="search.js"></script>
     </head>
     <body style="margin:0;padding:0;" onload="loadData();">
@@ -55,13 +56,14 @@
             <div class="billboard">
                 <div class="stats">
                     <h3>Stats</h3>
-                    
-                    <label>JavaScript</label>
-                    <div class="progress-bar"></div>
-                    <br>
-                    <label>CSS</label>
-                    <div class="progress-bar"></div>
-                    <br>
+                    <ul id="stats-listing">
+                        <li>
+                            <h4>JavaScript</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

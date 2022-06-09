@@ -32,7 +32,7 @@ html {
 .overall-wrapper {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 150px minmax(300px,auto) minmax(150px,225px);
+    grid-template-columns: 150px minmax(300px,900px) minmax(150px,225px);
     grid-template-rows: 50px auto;
     column-gap: 10px;
 }
@@ -120,6 +120,11 @@ html {
     float: left;
 }
 
+
+
+
+
+
 /* Billboard */
 .billboard {
     grid-column: 3;
@@ -138,4 +143,27 @@ html {
 .stats h3 {
     margin: 5px 0;
     text-decoration: underline;
+}
+
+.stats h4 {
+    margin: 2px 0;
+}
+
+.stats ul {
+    padding: 0;
+}
+
+.stats li{
+    list-style: none;
+    width: 90%;
+}
+.stats .progress-bar {
+    display: block;
+    height: 20px;
+}
+
+.stats .progress-fill {
+    background-color: red;
+    border-radius: 5px;
+    height: 10px;
 }
