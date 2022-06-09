@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="search.css">
         <link rel="stylesheet" href="../Languages.css">
+        <script src="../Utility/utility.js"></script>
         <script src="search.js"></script>
     </head>
     <body style="margin:0;padding:0;" onload="loadData();">
@@ -23,13 +24,11 @@
                 <div class="filter-wrapper">
                     <h3>Filter</h3>
                     <div class="filter-tags">
+                        <button onClick="updateDisplay();">Update</button>
                         <h4>Tags</h4>
 
-                        <input type="checkbox">
-                        <label>JavaScript</label>
-                        <br>
-                        <input type="checkbox">
-                        <label>CSS</label>
+                        <ul class="filter-tags-options" id="filter-tags">
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -55,13 +54,14 @@
             <div class="billboard">
                 <div class="stats">
                     <h3>Stats</h3>
-                    
-                    <label>JavaScript</label>
-                    <div class="progress-bar"></div>
-                    <br>
-                    <label>CSS</label>
-                    <div class="progress-bar"></div>
-                    <br>
+                    <ul id="stats-listing">
+                        <li>
+                            <h4>JavaScript</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
