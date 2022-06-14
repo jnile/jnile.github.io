@@ -1,7 +1,7 @@
 let onDisplay = [] /* Stores the displayed info */
 let buffer; /* Will store sorted array of information to display*/
+let filteredBuffer; /* Will store sorted array of information to display*/
 let data; /* Data loaded into website */
-let currPageNo = 1; /* Page number of stuff loaded */
 let tagInfo = {allTags:[], tagsCount:[], totalTags: 0} /* Stores data about tags */
 
 async function loadData() {
@@ -30,10 +30,13 @@ async function getData() {
     .then(json => {
     //json vaiable contains object with data
     data = json;
+    
+    buffer = JSON.parse(JSON.stringify(data.storage)); /* Deep Copy - copies by value not by reference */
 
-    buffer = data.storage;
     console.log("Data fetched");
     });
+
+    search();
 }
 
 /**
@@ -43,23 +46,20 @@ function setOnDisplay() {
     console.log("onDisplay array called.");
 
     onDisplay = [];
-    let filteredBuffer = filterBuffer();
-    let maxDocs = filteredBuffer.length;
-    if(maxDocs < 11) {
-        currPageNo = 1;
-        for(let i = 0; i < maxDocs; i++) {
-            onDisplay.push(filteredBuffer[i]);
-        }
+    filteredBuffer = filterBuffer();
+    
+    for(let i = 0; i < filteredBuffer.length; i++) {
+        onDisplay.push(filteredBuffer[i]);
     }
+
     console.log("Display array set");
 }
-
 /**
  * Displays the onDisplay array listings
  */
 function displayOptions() {
     console.log("display options started");
-    let display = ""
+    let display = "";
     for(let x = 0; x < onDisplay.length; x++) {
         display += createProjectListing(onDisplay[x]);
     }
@@ -160,7 +160,37 @@ function updateDisplay () {
     displayOptions();
 }
 
+/**
+ * Function to conduct the search function from search bar
+ */
+ function search() {
 
+    let sentenceToSearch = document.getElementById("search-bar").value;
+
+    /* Traverse the data array to set buffer Array */
+    buffer = [];
+
+    if(sentenceToSearch == "") {
+        buffer = JSON.parse(JSON.stringify(data.storage));
+    }
+    else {
+        for(let x = 0; x < data.storage.length; x++) {
+            if(data.storage[x].title.includes(sentenceToSearch) || data.storage[x].short_desc.includes(sentenceToSearch)) {
+                buffer.push(data.storage[x]);
+            }
+        }
+    }
+
+    refresh();
+}
+
+/**
+ * Refresh list
+ */
+function refresh() {
+    setOnDisplay();
+    displayOptions();
+}
 
 
 
@@ -237,6 +267,7 @@ function createFilterTags() {
  * Create a li element for a specific tag
  * 
  * @param tag name of the tag
+ * @return string of li element of the tag
  */
 function createFilterTagListing(tag) {
     let temp = `<li>
