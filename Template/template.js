@@ -50,8 +50,12 @@ function addImages(imageArr) {
   for(let i = 0; i < imageArr.length; i++) {
     let nameOfFile = imageArr[i];
 
-    listOfImages += `<li class="info-image"><img src="../Archives/Documents/${docNo}/${nameOfFile}"></li>`;
+    listOfImages += `<li class="info-image"><img src="../Archives/Documents/${docNo}/${nameOfFile}" onclick="openImage(this);"></li>`;
   }
 
   document.getElementById("info-image-list").innerHTML = listOfImages;
+}
+
+function openImage(img) {
+  window.open(img.src);
 }
