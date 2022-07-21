@@ -1,17 +1,18 @@
 {
-    "docNo": 0,
-    "title": "Example-Title 2",
-    "date_started": "20/02/2012",
-    "date_updated": "20/02/2012",
-    "tags": [
-        "javascript",
-        "css",
-        "html"
-    ],
-    "link": "somelink",
     "images": [
-        "test.png"
+        "ModifyListing.png",
+        "Selection.png",
+        "CreateNewListing.png",
+        "MainMenu.png"
     ],
-    "short_desc": "Example-short desc",
-    "long_desc": "Example-Long desc Long Long Long Long Long Long Long "
+    "date_updated": "15\/07\/2022",
+    "link": "TBA",
+    "short_desc": "A GUI to make it easier to add and modify listings on the website. Currently only works locally.",
+    "docNo": 0,
+    "title": "KOFK Archive Manager",
+    "date_started": "12\/07\/2022",
+    "tags": [
+        "java"
+    ],
+    "long_desc": "The GUI System contains 4 main panels. The Main Menu Panel which has the navigation tools."
 }

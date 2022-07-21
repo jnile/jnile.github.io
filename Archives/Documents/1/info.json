@@ -1,17 +1,1 @@
-{
-    "docNo": 1,
-    "title": "Example-Title",
-    "date_started": "20/02/2012",
-    "date_updated": "20/02/2012",
-    "tags": [
-        "javascript",
-        "css",
-        "html"
-    ],
-    "link": "somelink",
-    "images": [
-        "test.png"
-    ],
-    "short_desc": "Example-short desc",
-    "long_desc": "Example-Long desc Long Long Long Long Long Long Long "
-}
+{"images":["ScatterChart.png","RadarChart.png","PolarChart.png","MixedChart.png","LineChart.png","DoughnutPieChart.png","BubbleChart.png","BarChart.png","AreaChart.png","Layout.png"],"date_updated":"21\/07\/2022","link":"https:\/\/github.com\/jnile\/Charts","short_desc":"Using Charts.js to make different types of graphs.","docNo":1,"title":"Learning Charts.js","date_started":"21\/07\/2022","tags":["html","css","javascript"],"long_desc":"Charts.js is a javascript library which creates different types of charts. This is an excellent api which helps in saving time since you do not need to spend time in recreating different types of charts. The api also allows for a large amount of customisability with options for fill, line colour,etc."}

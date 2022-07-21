@@ -1,1 +1,26 @@
-{"storage":[{"date_updated":"20\/02\/2012","short_desc":"Example-short desc","docNo":0,"title":"Example-Title","date_started":"20\/02\/2012","tags":["javascript","css","html"]},{"date_updated":"20\/02\/2012","short_desc":"Example-short desc but is it","docNo":1,"title":"Example-Title","date_started":"20\/02\/2012","tags":["javascript","css","html"]},{"date_updated":"dfg","short_desc":"sdf","docNo":2,"title":"dfg","date_started":"dfg","tags":["javascript"]}]}
+{
+    "storage": [
+        {
+            "date_updated": "15\/07\/2022",
+            "short_desc": "A GUI to make it easier to add and modify listings on the website. Currently only works locally.",
+            "docNo": 0,
+            "title": "KOFK Archive Manager",
+            "date_started": "12\/07\/2022",
+            "tags": [
+                "java"
+            ]
+        },
+        {
+            "date_updated": "21\/07\/2022",
+            "short_desc": "Using Charts.js to make different types of graphs.",
+            "docNo": 1,
+            "title": "Learning Charts.js",
+            "date_started": "21\/07\/2022",
+            "tags": [
+                "html",
+                "css",
+                "javascript"
+            ]
+        }
+    ]
+}

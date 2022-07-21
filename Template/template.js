@@ -12,7 +12,6 @@ async function loadingData() {
   .then(res => res.json())
   .then(json => {
     //json vaiable contains object with data
-    console.log(json);
     displayInfo(json);
   });
 }
@@ -25,6 +24,9 @@ function displayInfo(data) {
   document.getElementById("info-date-updated").innerHTML = data.date_updated;
   document.getElementById("info-short-desc").innerHTML = data.short_desc;
   document.getElementById("info-long-desc").innerHTML = data.long_desc;
+
+  document.getElementById("info-resource-link").innerHTML = `<a href="${data.link}">${data.link}</a>`;
+
   createTags(data.tags);
   addImages(data.images);
 }

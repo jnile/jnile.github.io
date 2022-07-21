@@ -95,3 +95,7 @@ html {
     height: 100px;
     width: auto;
 }
+
+.info-image img:hover {
+    cursor: pointer;
+}
