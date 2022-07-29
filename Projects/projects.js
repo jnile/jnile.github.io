@@ -22,7 +22,6 @@ async function loadData() {
  * Fetches data from storage
  */
 async function getData() {
-    console.log("getData called");
     let url = new URL(document.location.href);
 
     await fetch(url.origin + `/archivetest/Archives/content.json`)
@@ -33,39 +32,32 @@ async function getData() {
     
     buffer = JSON.parse(JSON.stringify(data.storage)); /* Deep Copy - copies by value not by reference */
 
-    console.log("Data fetched");
-    });
 
     search();
+    });
 }
 
 /**
  * Populates the onDisplay array for data listings to be seen
  */
 function setOnDisplay() {
-    console.log("onDisplay array called.");
-
     onDisplay = [];
     filteredBuffer = filterBuffer();
     
     for(let i = 0; i < filteredBuffer.length; i++) {
         onDisplay.push(filteredBuffer[i]);
     }
-
-    console.log("Display array set");
 }
 /**
  * Displays the onDisplay array listings
  */
 function displayOptions() {
-    console.log("display options started");
     let display = "";
     for(let x = 0; x < onDisplay.length; x++) {
         display += createProjectListing(onDisplay[x]);
     }
 
     document.getElementById("project-listing").innerHTML = display;
-    console.log("Display options finished");
 }
 
 /**
@@ -86,7 +78,6 @@ function addTags(tags) {
  * Populates the tagInfo object
  */
 function generateStats() {
-    console.log("generateStats begun");
 
     for(let x = 0; x < data.storage.length; x++) {
         for(let k = 0; k < data.storage[x].tags.length; k++) {
@@ -100,8 +91,6 @@ function generateStats() {
             tagInfo.totalTags++;
         }
     }
-
-    console.log("generateStats finished");
 }
 
 /**

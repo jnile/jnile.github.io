@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+#title-overhead {
+    width: 80vw;
+    padding: 10px;
+
+    margin-inline: auto;
+}
+
+#big-title {
+    text-align: center;
+    font-size: 5em;
+}
+
+#button-overhead {
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+
+}
+
+#button-overhead li {
+    display: inline-block;
+
+    margin-inline: 5px;
+}
+
+.display-buttons {
+    padding: 10px;
+
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#projects {
+    background-color: rgb(255, 230, 0);
+}
+
+#aboutme {
+    background-color: rgb(255, 205, 214);
+}
+
+#projects:hover {
+    background-color: rgb(255, 238, 86);
+}
+
+#aboutme:hover {
+    background-color: rgb(255, 173, 188);
+}

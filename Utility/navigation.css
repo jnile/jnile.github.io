@@ -1,0 +1,27 @@
+/* Navigation */
+.navigation-wrapper ul{
+    list-style-type: none;
+    margin: 0;
+    margin-inline: 20px;
+    min-width: 600px;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fffafa;
+}
+
+.navigation-wrapper li {
+    float: left;
+}
+
+.navigation-wrapper li a{
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.navigation-wrapper a:hover {
+    background-color: #ffefef;
+}
