@@ -24,7 +24,7 @@ async function loadData() {
 async function getData() {
     let url = new URL(document.location.href);
 
-    await fetch(url.origin + `/archivetest/Archives/content.json`)
+    await fetch(url.origin + `/Archives/content.json`)
     .then(res => res.json())
     .then(json => {
     //json vaiable contains object with data

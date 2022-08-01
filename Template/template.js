@@ -8,7 +8,7 @@ async function loadingData() {
   
   docNo = params.get("docNo");
 
-  fetch(url.origin + `/archivetest/Archives/Documents/${docNo}/info.json`)
+  fetch(url.origin + `/Archives/Documents/${docNo}/info.json`)
   .then(res => res.json())
   .then(json => {
     //json vaiable contains object with data
