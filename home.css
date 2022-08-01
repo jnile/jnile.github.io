@@ -36,6 +36,10 @@ body {
     border-radius: 5px;
 }
 
+.display-buttons:hover {
+    cursor: pointer;
+}
+
 #projects {
     background-color: rgb(255, 230, 0);
 }
