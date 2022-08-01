@@ -181,11 +181,11 @@ html {
 }
 .stats .progress-bar {
     display: block;
-    height: 20px;
+    height: 10px;
 }
 
 .stats .progress-fill {
     background-color: red;
     border-radius: 5px;
-    height: 10px;
+    height: 6px;
 }
