@@ -1,13 +1,14 @@
 /* Navigation */
 .navigation-wrapper ul{
     list-style-type: none;
-    margin: 0;
+    margin: 0 !important;
     margin-inline: 20px;
     min-width: 600px;
     max-width: 100%;
     padding: 0;
+    padding-left: 20px;
     overflow: hidden;
-    background-color: #fffafa;
+    background-color: #ffe8e8;
 }
 
 .navigation-wrapper li {
