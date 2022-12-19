@@ -17,10 +17,11 @@
 
 .navigation-wrapper li a{
     display: block;
-    color: black;
+    color: rgb(56, 56, 56);
     text-align: center;
     text-decoration: none;
     padding: 14px 16px;
+    font-weight: 600;
 }
 
 .navigation-wrapper a:hover {
